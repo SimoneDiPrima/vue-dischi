@@ -1,10 +1,10 @@
 <template>
 <main id="MainDisks">
   <div class="container offset-1 col-10 ">
-    <div class="Disks-list row py-3">
-      <div class="col-2 m-1 d-flex flex-wrap" v-for="disk in disks"
+    <div class="Disks-list row py-4 g-4">
+      <div class="col-2 m-2 d-flex flex-wrap" v-for="disk in disks"
         :key="disk.title">
-       <SingleDisk :image="disk.poster" :nameAlbum="disk.title" :author="disk.author" :year="disk.year" />
+       <SingleDisk :image="disk.poster" :nameAlbum="disk.title" :author="disk.author" :year="disk.year" role="button" />
       </div>
 
     </div>

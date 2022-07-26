@@ -18,6 +18,7 @@ export default {
 <style lang="scss">
 @import '../assets/scss/vars';
 header{
+  min-height:100px;
  background-color:$Primary_color;
 }
 .icon-header{
