@@ -1,12 +1,13 @@
 <template>
     <header>
- <i class="fa-brands fa-spotify icon-header"></i>
+ <i class="fa-brands fa-spotify icon-header "></i>
     </header>
 
 </template>
 
 
 <script>
+
 export default {
   name:'HeaderLogo',
   
@@ -15,13 +16,14 @@ export default {
 </script>
 
 <style lang="scss">
+@import '../assets/scss/vars';
 header{
-  background-color: #2E3A46;
+ background-color:$Primary_color;
 }
 .icon-header{
-  font-size: 80px;
-  color:#1ED760;
- margin:10px;
+  font-size: 2rem;
+  color:$Logo_Color ;
+ margin:20px;
 }
 
 </style>
