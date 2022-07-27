@@ -4,6 +4,7 @@
     <h4 class="text-white text-uppercase ">{{ nameAlbum }}</h4>
     <h5 class="author"> {{ author }}</h5>
     <h6 class="year">{{ year }}</h6>
+    <h6 class="genre">{{ genre }}</h6>
 </div>
 
 </template>

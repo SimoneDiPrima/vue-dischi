@@ -4,7 +4,7 @@
     <div class="Disks-list row py-4 g-4">
       <div class="col-2 m-2 d-flex flex-wrap" v-for="disk in disks"
         :key="disk.title">
-       <SingleDisk :image="disk.poster" :nameAlbum="disk.title" :author="disk.author" :year="disk.year" role="button" />
+       <SingleDisk :image="disk.poster" :nameAlbum="disk.title" :author="disk.author" :year="disk.year" :genre="disk.genre" role="button" />
       </div>
 
     </div>

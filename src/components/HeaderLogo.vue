@@ -1,22 +1,18 @@
 <template>
     <header class="d-flex justify-content-between align-items-center">
  <i class="fa-brands fa-spotify icon-header"></i>
- <select class="me-3 mt-3 form-select select-menu" name="" id="">
-  <option value="">rock</option>
-  <option value="">pop</option>
-  <option value="">metal</option>
-  <option value="">punk</option>
- </select>
+    <BaseSelect/>
     </header>
 
 </template>
 
 
 <script>
+import BaseSelect from './BaseSelect.vue'
 
 export default {
   name:'HeaderLogo',
-  
+  components:{ BaseSelect }
 }
 
 </script>
@@ -32,9 +28,4 @@ header{
   color:$Logo_Color ;
  margin:20px;
 }
-.select-menu{
-  max-width:10rem;
-  height:2rem;
-}
-
 </style>
