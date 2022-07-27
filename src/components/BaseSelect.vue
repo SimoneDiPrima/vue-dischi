@@ -1,7 +1,7 @@
 <template>
 <select class="me-3 mt-3 form-select select-menu" name="" id="">
-    <option v-for="genre in options" :key="pippo.title">
-        {{ genre }}
+    <option v-for="option in options" :key="option.title">
+        {{ option }}
     </option>
 </select>
 
