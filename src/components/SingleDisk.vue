@@ -16,7 +16,8 @@ export default {
     nameAlbum : String,
     image : String,
     author : String,
-    year : String
+    year : String,
+    genre : String
  }
 }
 
@@ -27,7 +28,7 @@ export default {
 @import '../assets/scss/vars';
  .diskArticle{
     background-color:  $Primary_color;
-    min-width:100%;
+    width:100%;
     margin:-10px;
  }
  .author,.year{
