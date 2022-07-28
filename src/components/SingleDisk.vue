@@ -30,7 +30,6 @@ export default {
  .diskArticle{
     background-color:  $Primary_color;
     width:100%;
-    margin:-10px;
  }
  .author,.year{
     color: $Name_author;

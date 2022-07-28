@@ -1,10 +1,11 @@
 <template>
 <main id="MainDisks">
   <div class="container offset-1 col-10 ">
-    <div class="Disks-list row py-4 g-4">
-      <div class="col-2 m-2 d-flex flex-wrap" v-for="disk in disks"
+    <div class="Disks-list row py-5 gy-3">
+      <div class="singleDisk col-lg-2 text-center col-md-3 col-sm-6 col-xs-12 d-flex flex-wrap" v-for="disk in disks"
         :key="disk.title">
-       <SingleDisk :image="disk.poster" :nameAlbum="disk.title" :author="disk.author" :year="disk.year" :genre="disk.genre" role="button" />
+        <SingleDisk :image="disk.poster" :nameAlbum="disk.title" :author="disk.author" :year="disk.year"
+        :genre="disk.genre" role="button"/>
       </div>
 
     </div>
@@ -40,5 +41,5 @@ export default {
 #MainDisks{
   background-color:$Secondary_color;
 }
-
+.singleDisk{ flex-basis:20%;}
 </style>

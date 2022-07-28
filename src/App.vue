@@ -1,6 +1,6 @@
 <template>
 <div>
-  <HeaderLogo/>
+  <HeaderLogo  @gen-options="genMenu"   />
    <MainDisks/>
  
 </div>
@@ -15,7 +15,13 @@ export default {
   components:{
     HeaderLogo,
     MainDisks,
-}
+},
+methods:{
+ genMenu() {
+  console.log(`mi hanno cliccato`)
+ }
+},
+
 }
 </script>
 
