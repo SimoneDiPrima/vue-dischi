@@ -1,28 +1,33 @@
 <template>
-<div>
-  <HeaderLogo  @gen-options="genMenu"   />
-   <MainDisks/>
- 
-</div>
-
+  <div>
+    <HeaderLogo :music-list="musicList" @genre-change="setSelectedGenre " />
+    <MainDisks :select-genre="selectedGenre" />
+  
+  </div>
 </template>
 
 <script>
-import HeaderLogo from './components/HeaderLogo.vue'
-import MainDisks from './components/MainDisks.vue'
+  import HeaderLogo from './components/HeaderLogo.vue'
+  import MainDisks from './components/MainDisks.vue'
 
-export default {
-  components:{
-    HeaderLogo,
-    MainDisks,
-},
-methods:{
- genMenu() {
-  console.log(`mi hanno cliccato`)
- }
-},
-
-}
+  export default {
+    components:{
+      HeaderLogo,
+      MainDisks,
+      },
+       data() {
+      return {
+      musicList : ['Rock','Metal','Pop','Jazz'],
+      selectedGenre : ''
+      }
+    },
+     methods:{
+      setSelectedGenre(newGen){
+         this.selectedGenre = newGen;
+      }
+  
+    }
+  }
 </script>
 
 <style lang="scss">
