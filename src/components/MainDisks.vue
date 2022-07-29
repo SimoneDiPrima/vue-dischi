@@ -26,7 +26,8 @@ import SingleDisk from './SingleDisk.vue';
 export default {
   name:'MainDisks',
   data(){
-    return {disks : []}
+    return {disks : [],
+     }
   },
   props:{
     selectGenre : String
@@ -41,10 +42,16 @@ export default {
     }
   },
   created(){
-    axios.get('https://flynn.boolean.careers/exercises/api/array/music').then((res)=>{
+    axios.get('https://flynn.boolean.careers/exercises/api/array/music')
+    .then((res)=>{
       this.disks = res.data.response
+      const genres = [ ]
+      this.disks.forEach((disk) => {
+        if(!genres.includes(disk.genre))genres.push(disk.genre)
       })
-  },
+      this.$emit('fetch-disks',genres) } )
+      }
+  ,
   components:{ SingleDisk },
 }
 

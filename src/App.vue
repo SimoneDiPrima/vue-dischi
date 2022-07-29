@@ -1,7 +1,7 @@
 <template>
   <div>
     <HeaderLogo :music-list="musicList" @genre-change="setSelectedGenre " />
-    <MainDisks :select-genre="selectedGenre" />
+    <MainDisks :select-genre="selectedGenre" @fetch-disks ="setGenresList" />
   
   </div>
 </template>
@@ -17,13 +17,16 @@
       },
        data() {
       return {
-      musicList : ['Rock','Metal','Pop','Jazz'],
+      musicList:[ ],
       selectedGenre : ''
       }
     },
      methods:{
       setSelectedGenre(newGen){
          this.selectedGenre = newGen;
+      },
+      setGenresList(genres){
+        this.musicList = genres
       }
   
     }
