@@ -34,6 +34,7 @@ export default {
   header {
     min-height: 200px;
     background-color: $Primary_color;
+    line-height:200px;
   }
 
   .icon-header {

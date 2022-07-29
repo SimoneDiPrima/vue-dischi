@@ -1,8 +1,8 @@
 <template>
   <main id="MainDisks">
     <div class="container offset-1 col-10 ">
-      <div class="Disks-list row py-5 gy-3">
-        <div class="singleDisk col-lg-2 text-center col-md-3 col-sm-6 col-xs-12 d-flex flex-wrap" v-for="disk in filteredDisks"
+      <div class="Disks-list row gy-3 py-3">
+        <div class="singleDisk col-lg-2 d-flex flex-wrap" v-for="disk in filteredDisks"
           :key="disk.title">
           <SingleDisk :image="disk.poster"
             :nameAlbum="disk.title" 
